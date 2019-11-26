@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Hint from './hint';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="main">
+        <p id="guessblock">Master Mind</p>
+        <div className="playingfield">
+          <div className="hints">
+            <p>hints</p>
+            <Hint hints={['w', 'w', 'w', 'n']} />
+            <Hint hints={['n', 'n', 'b', 'w']} />
+            <Hint hints={['b', 'b', 'w', 'b']} />
+          </div>
+          <div className="guesses">
+            <p>guesses</p>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
 }
 
 export default App;
