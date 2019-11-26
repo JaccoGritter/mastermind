@@ -35,7 +35,7 @@ class Board extends React.Component {
                 </div>
                 <div className="colorSelector">
                     <p>colorSelector</p>
-                    <ColorSelector />
+                    <ColorSelector onSelectColor = {this.props.onSelectColor}/>
                 </div>
             </div>
         )

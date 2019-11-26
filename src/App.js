@@ -8,8 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedColor : 'y'
+      selectedColor : 'yellow'
     };
+    this.selectColor = this.selectColor.bind(this);
   
     // set initial values for guesses and hints
     let hintArray = [];
@@ -22,15 +23,19 @@ class App extends React.Component {
     this.state.guesses = guessArray;
   }
 
-  selectColor(color) {
-    //this.this.setState({selectedColor: color})
+  selectColor(newColor) {
+    //console.log('selectcolor activated on ' + color);
+    let oldColor = this.state.selectedColor;
+    document.getElementById(oldColor).classList.remove('pickedcolor');
+    this.setState({selectedColor: newColor});
+    document.getElementById(newColor).classList.add('pickedcolor');
   }
 
   render() {
     return (
       <div className="main">
         <p id="guessblock">Master Mind</p>
-        <Board hints={this.state.hints}/>
+        <Board hints={this.state.hints} selectedColor={this.state.selectedColor} onSelectColor={this.selectColor}/>
       </div>
     );
   }
