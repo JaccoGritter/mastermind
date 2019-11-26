@@ -2,24 +2,40 @@
     display: flex;
   }
   
-  .hints {
-    text-align: center;
-    width: 40%;
+.hints {
+  text-align: center;
+  width: 40%;
+}
+
+.hint {
+  display: inline-box;
+  margin: 5px auto;
+  width: 30%;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.hint img {
+  width: 20%;
+}
+
+.guesses {
+  width: 70%;
+}
+
+.guess {
+  display: inline-box;
+  margin: 7px auto;
+  width: 70%;
+  height: 40px;
   }
   
-  .hint {
-    display: inline-box;
-    margin: 2px auto;
-    width: 30%;
-    border: 1px solid black;
-  }
-  
-  .hint img {
-    width: 20%;
-  }
-  
-  .guesses {
-    width: 70%;
-  }
+.colorchoice {
+
+}
+
+#pickedcolor {
+  width: 40px;
+}
   
   

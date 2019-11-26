@@ -2,23 +2,42 @@ import React from 'react';
 import Hint from './Hint';
 import Guess from './Guess';
 import './Board.css';
+import ColorSelector from './ColorSelector';
 
 class Board extends React.Component {
 
     render() {
         return (
-        <div className="playingfield">
-            <div className="hints">
-            <p>hints</p>
-            <Hint hints={this.props.hints[0]} />
-            <Hint hints={this.props.hints[0]} />
-          </div>
-          <div className="guesses">
-            <p>guesses</p>
-            <Guess />
-            <Guess />
-          </div>
-        </div>
+            <div>
+                <div className="playingfield">
+                    <div className="hints">
+                        <p>hints</p>
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                        <Hint hints={this.props.hints[0]} />
+                    </div>
+                    <div className="guesses">
+                        <p>guesses</p>
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                        <Guess />
+                    </div>
+                </div>
+                <div className="colorSelector">
+                    <p>colorSelector</p>
+                    <ColorSelector />
+                </div>
+            </div>
         )
     }
 }
