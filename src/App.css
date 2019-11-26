@@ -18,27 +18,3 @@
   border: 3px double white;
 }
 
-.playingfield {
-  display: flex;
-}
-
-.hints {
-  text-align: center;
-  width: 40%;
-}
-
-.hint {
-  display: inline-box;
-  margin: 2px auto;
-  width: 30%;
-  border: 1px solid black;
-}
-
-.hint img {
-  width: 20%;
-}
-
-.guesses {
-  width: 345px;
-}
-
