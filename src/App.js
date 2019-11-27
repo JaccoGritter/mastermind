@@ -6,6 +6,7 @@ import Hintsblock from './Hintsblock'
 // import Board from './Board';
 import ColorSelector from './ColorSelector';
 import Guessesblock from './Guessesblock';
+import MM from './mm';
 
 
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
     }
     this.state.hints = hintArray;
     this.state.guesses = guessArray;
+    this.state.puzzle = MM.generatePuzzle();
   }
 
   selectColor(newColor) {
@@ -47,9 +49,17 @@ class App extends React.Component {
   }
 
   checkGuess() {
-    console.log('Check guess');
+    //console.log('Check guess');
     const guessArray = this.state.guesses;
-    console.log(guessArray[this.state.turn-1]);
+    if(guessArray[this.state.turn-1].includes('no')) return;
+    const hintArray = this.state.hints;
+    let result = MM.checkGuess(this.state.puzzle, guessArray[this.state.turn-1])
+    hintArray[this.state.turn-1] = result;
+    let newTurn = this.state.turn + 1;
+    this.setState({hints: hintArray, turn: newTurn});
+    console.log('Guesses: ' + guessArray[this.state.turn-1]);
+    console.log('Puzzle: ' + this.state.puzzle);
+    console.log('result: ' + result);
   }
 
   render() {
