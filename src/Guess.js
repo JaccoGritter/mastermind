@@ -8,12 +8,8 @@ import yellowGuess from './images/yellowGuess.png';
 import noGuess from './images/noGuess.png';
 
 class Guess extends React.Component {
-    constructor(props) {
-        super(props);
-        this.renderGuesses = this.renderGuesses.bind(this);
-    }
-
-    renderGuesses(guesses) {
+   
+    renderGuesses(guesses, active) {
             const guessesToRender = guesses.map(element => {
                 switch(element) {
                     case 'yellow':
@@ -35,20 +31,23 @@ class Guess extends React.Component {
                 }
         });
 
-        return (
+        const renderedGuess = (
             <div className = "guess">
             <span><img src={guessesToRender[0]} alt="guess1"/></span>
             <span><img src={guessesToRender[1]} alt="guess2"/></span>
             <span><img src={guessesToRender[2]} alt="guess3"/></span>
             <span><img src={guessesToRender[3]} alt="guess4"/></span>
+            <span>{active ? 'check': '     '}</span>
             </div>
         )
+
+        return (renderedGuess);
 
     }
 
     render() {
         return (
-            this.renderGuesses(this.props.guess)
+            this.renderGuesses(this.props.guess, this.props.active)
         )
     }
 }

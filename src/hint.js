@@ -4,10 +4,6 @@ import whitePin from './images/whitePin.png';
 import noPin from './images/noPin.png';
 
 class Hint extends React.Component {
-    constructor(props) {
-        super(props);
-        this.renderHint = this.renderHint.bind(this);
-    }
 
     renderHint(hints) {
         const pins = hints.map(hint => {
