@@ -4,10 +4,10 @@ import Guess from './Guess';
 class Guessesblock extends React.Component {
 
     renderGuessesBlock(guesses, turn){
-        let count=1;
+        let count=0;
         let active=false;
         const guessesBlock = guesses.map(guess => {
-            active = (count===turn);
+            active = (count+1===turn);
             count++;
             return <Guess guess={guess} active={active} key={'Guess'+count} onMakeChoice={this.props.onMakeChoice} onCheckGuess={this.props.onCheckGuess}/>
         }).reverse();
