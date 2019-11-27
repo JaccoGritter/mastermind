@@ -4,6 +4,7 @@ import Hintsblock from './Hintsblock'
 import Guess from './Guess';
 import './Board.css';
 import ColorSelector from './ColorSelector';
+import Guessesblock from './Guessesblock';
 
 class Board extends React.Component {
 
@@ -17,14 +18,7 @@ class Board extends React.Component {
                     </div>
                     <div className="guesses">
                         <p>guesses</p>
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
-                        <Guess guess={this.props.guesses[0]} />
+                        <Guessesblock guesses={this.props.guesses} />
                     </div>
                 </div>
                 <div className="colorSelector">
