@@ -4,8 +4,10 @@ import Hint from './Hint';
 class Hintsblock extends React.Component {
    
     renderHintsBlock(hints){
+        let counter = 0;
         const hintBlock = hints.map(hint => {
-            return <Hint hints={hint}/>
+            counter++;
+            return <Hint hints={hint} key={'hint' + counter}/>
         });
         return hintBlock;
     }
