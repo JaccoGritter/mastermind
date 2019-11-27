@@ -9,7 +9,7 @@ class Guessesblock extends React.Component {
         const guessesBlock = guesses.map(guess => {
             active = (count+1===turn);
             count++;
-            return <Guess guess={guess} active={active} key={'Guess'+count} onMakeChoice={this.props.onMakeChoice} onCheckGuess={this.props.onCheckGuess}/>
+            return <Guess guess={guess} active={active} key={'Guess'+count} onMakeChoice={this.props.onMakeChoice} onCheckGuess={this.props.onCheckGuess} gameOver={this.props.gameOver}/>
         }).reverse();
         return guessesBlock;
     }

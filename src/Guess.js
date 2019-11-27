@@ -38,7 +38,7 @@ class Guess extends React.Component {
         });
 
         let renderedGuess;
-        if (active) {
+        if (active && !this.props.gameOver) {
             renderedGuess = (
                 <div className="guess">
                     <span><img src={guessesToRender[0]} alt="guess1" id="1" onClick={this.makeChoice}/></span>

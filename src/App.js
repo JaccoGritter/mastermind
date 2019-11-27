@@ -3,7 +3,7 @@ import './App.css';
 import './Board.css';
 // import Hint from './Hint';
 import Hintsblock from './Hintsblock'
-// import Board from './Board';
+import Message from './Message';
 import ColorSelector from './ColorSelector';
 import Guessesblock from './Guessesblock';
 import MM from './mm';
@@ -15,7 +15,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       selectedColor: 'yellow',
-      turn: 1
+      turn: 1,
+      message: "Let's play!",
+      gameOver: false
     };
     this.selectColor = this.selectColor.bind(this);
     this.makeChoice = this.makeChoice.bind(this);
@@ -51,12 +53,27 @@ class App extends React.Component {
   checkGuess() {
     //console.log('Check guess');
     const guessArray = this.state.guesses;
-    if(guessArray[this.state.turn-1].includes('no')) return;
+    if(guessArray[this.state.turn-1].includes('no')) {
+      this.setState({message: 'Please pick 4 colours!'});
+      return;
+    }
+    
     const hintArray = this.state.hints;
     let result = MM.checkGuess(this.state.puzzle, guessArray[this.state.turn-1])
     hintArray[this.state.turn-1] = result;
     let newTurn = this.state.turn + 1;
-    this.setState({hints: hintArray, turn: newTurn});
+    let newMessage;
+    let gameOver = false;
+    if (result.filter(value => value === 'b').length === 4 ) {
+      newMessage = "You win in " + (newTurn-1) + " turns!";
+      gameOver = true;
+    } else if(newTurn === 9) {
+      newMessage = "No more turns. Game over!"
+      gameOver = true;
+    } else newMessage = 'Turn ' + newTurn + ". Let's play!";
+
+    this.setState({hints: hintArray, turn: newTurn, message: newMessage, gameOver: gameOver});
+    
     console.log('Guesses: ' + guessArray[this.state.turn-1]);
     console.log('Puzzle: ' + this.state.puzzle);
     console.log('result: ' + result);
@@ -66,15 +83,13 @@ class App extends React.Component {
     return (
       <div className="main">
         <p id="guessblock">Master Mind</p>
-
+        <Message message={this.state.message}/>
         <div className="playingfield">
           <div className="hints">
-            <p>hints</p>
             <Hintsblock hints={this.state.hints} />
           </div>
           <div className="guesses">
-            <p>guesses</p>
-            <Guessesblock guesses={this.state.guesses} turn={this.state.turn} onMakeChoice={this.makeChoice} onCheckGuess={this.checkGuess} />
+            <Guessesblock guesses={this.state.guesses} turn={this.state.turn} onMakeChoice={this.makeChoice} onCheckGuess={this.checkGuess} gameOver={this.state.gameOver}/>
           </div>
         </div>
 
