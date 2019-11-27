@@ -20,7 +20,8 @@
 }
 
 .guesses {
-  width: 70%;
+  width: 60%;
+  text-align: left;
 }
 
 .guess {
