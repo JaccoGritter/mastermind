@@ -8,7 +8,7 @@ class Hintsblock extends React.Component {
         const hintBlock = hints.map(hint => {
             counter++;
             return <Hint hints={hint} key={'hint' + counter}/>
-        });
+        }).reverse();
         return hintBlock;
     }
 
