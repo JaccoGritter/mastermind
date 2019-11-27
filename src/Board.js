@@ -23,14 +23,14 @@ class Board extends React.Component {
                     </div>
                     <div className="guesses">
                         <p>guesses</p>
-                        <Guess />
-                        <Guess />
-                        <Guess />
-                        <Guess />
-                        <Guess />
-                        <Guess />
-                        <Guess />
-                        <Guess />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
+                        <Guess guess={this.props.guesses[0]} />
                     </div>
                 </div>
                 <div className="colorSelector">
