@@ -45,7 +45,7 @@ class Guess extends React.Component {
                     <span><img src={guessesToRender[1]} alt="guess2" id="2" onClick={this.makeChoice}/></span>
                     <span><img src={guessesToRender[2]} alt="guess3" id="3" onClick={this.makeChoice}/></span>
                     <span><img src={guessesToRender[3]} alt="guess4" id="4" onClick={this.makeChoice}/></span>
-                    <span>&nbsp;&nbsp;&nbsp;<img src={checkButton} alt="checkbutton" onClick={this.checkGuess}/></span>
+                    <span>&nbsp;&nbsp;&nbsp;<img src={checkButton} alt="checkbutton" id="checkbutton" onClick={this.checkGuess}/></span>
                 </div>)
             } else {
             renderedGuess = (

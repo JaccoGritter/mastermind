@@ -16,7 +16,7 @@
 }
 
 .hint img {
-  width: 20%;
+  width: 30%;
 }
 
 .guesses {
@@ -31,8 +31,8 @@
   height: 40px;
   }
   
-.colorchoice {
-
+#checkbutton {
+  cursor: pointer;
 }
 
 .pickedcolor {
