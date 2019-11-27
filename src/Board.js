@@ -1,5 +1,6 @@
 import React from 'react';
 import Hint from './Hint';
+import Hintsblock from './Hintsblock'
 import Guess from './Guess';
 import './Board.css';
 import ColorSelector from './ColorSelector';
@@ -12,14 +13,7 @@ class Board extends React.Component {
                 <div className="playingfield">
                     <div className="hints">
                         <p>hints</p>
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
-                        <Hint hints={this.props.hints[0]} />
+                        <Hintsblock hints={this.props.hints} />
                     </div>
                     <div className="guesses">
                         <p>guesses</p>
