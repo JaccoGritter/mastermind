@@ -8,41 +8,60 @@ import yellowGuess from './images/yellowGuess.png';
 import noGuess from './images/noGuess.png';
 
 class Guess extends React.Component {
-   
+    constructor(props){
+        super(props);
+        this.makeChoice = this.makeChoice.bind(this);
+    }
+
     renderGuesses(guesses, active) {
-            const guessesToRender = guesses.map(element => {
-                switch(element) {
-                    case 'yellow':
-                        return yellowGuess;
-                    case 'green':
-                        return greenGuess;
-                    case 'white':
-                        return whiteGuess;
-                    case 'black':
-                        return blackGuess;
-                    case 'red':
-                        return redGuess;
-                    case 'blue':
-                        return blueGuess;
-                    case 'no':
-                        return noGuess;
+        const guessesToRender = guesses.map(element => {
+            switch (element) {
+                case 'yellow':
+                    return yellowGuess;
+                case 'green':
+                    return greenGuess;
+                case 'white':
+                    return whiteGuess;
+                case 'black':
+                    return blackGuess;
+                case 'red':
+                    return redGuess;
+                case 'blue':
+                    return blueGuess;
+                case 'no':
+                    return noGuess;
                 default:
                     return false;
-                }
+            }
         });
 
-        const renderedGuess = (
-            <div className = "guess">
-            <span><img src={guessesToRender[0]} alt="guess1"/></span>
-            <span><img src={guessesToRender[1]} alt="guess2"/></span>
-            <span><img src={guessesToRender[2]} alt="guess3"/></span>
-            <span><img src={guessesToRender[3]} alt="guess4"/></span>
-            <span>{active ? 'check': '     '}</span>
-            </div>
-        )
-
+        let renderedGuess;
+        if (active) {
+            renderedGuess = (
+                <div className="guess">
+                    <span><img src={guessesToRender[0]} alt="guess1" id="1" onClick={this.makeChoice}/></span>
+                    <span><img src={guessesToRender[1]} alt="guess2" id="2" onClick={this.makeChoice}/></span>
+                    <span><img src={guessesToRender[2]} alt="guess3" id="3" onClick={this.makeChoice}/></span>
+                    <span><img src={guessesToRender[3]} alt="guess4" id="4" onClick={this.makeChoice}/></span>
+                    <span><button>check</button></span>
+                </div>)
+            } else {
+            renderedGuess = (
+                <div className="guess">
+                    <span><img src={guessesToRender[0]} alt="guess1" /></span>
+                    <span><img src={guessesToRender[1]} alt="guess2" /></span>
+                    <span><img src={guessesToRender[2]} alt="guess3" /></span>
+                    <span><img src={guessesToRender[3]} alt="guess4" /></span>
+                </div>
+            )
+        }
+        
         return (renderedGuess);
+    }
 
+    makeChoice(e){
+        const position = e.target.id;
+        this.props.onMakeChoice(position-1);
     }
 
     render() {

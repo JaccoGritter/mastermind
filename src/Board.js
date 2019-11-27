@@ -18,7 +18,7 @@ class Board extends React.Component {
                     </div>
                     <div className="guesses">
                         <p>guesses</p>
-                        <Guessesblock guesses={this.props.guesses} turn={this.props.turn} />
+                        <Guessesblock guesses={this.props.guesses} turn={this.props.turn} onMakeChoice={this.props.onMakeChoice}/>
                     </div>
                 </div>
                 <div className="colorSelector">
