@@ -36,7 +36,7 @@ class App extends React.Component {
     return (
       <div className="main">
         <p id="guessblock">Master Mind</p>
-        <Board hints={this.state.hints} guesses={this.state.guesses} selectedColor={this.state.selectedColor} onSelectColor={this.selectColor} />
+        <Board hints={this.state.hints} guesses={this.state.guesses} selectedColor={this.state.selectedColor} onSelectColor={this.selectColor} turn={this.state.turn} />
       </div>
     );
   }

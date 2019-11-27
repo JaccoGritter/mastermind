@@ -1,7 +1,7 @@
 import React from 'react';
-import Hint from './Hint';
+//import Hint from './Hint';
 import Hintsblock from './Hintsblock'
-import Guess from './Guess';
+//import Guess from './Guess';
 import './Board.css';
 import ColorSelector from './ColorSelector';
 import Guessesblock from './Guessesblock';
@@ -18,7 +18,7 @@ class Board extends React.Component {
                     </div>
                     <div className="guesses">
                         <p>guesses</p>
-                        <Guessesblock guesses={this.props.guesses} />
+                        <Guessesblock guesses={this.props.guesses} turn={this.props.turn} />
                     </div>
                 </div>
                 <div className="colorSelector">
