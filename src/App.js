@@ -16,7 +16,7 @@ class App extends React.Component {
     // set initial values for guesses and hints
     let hintArray = [];
     let guessArray = [];
-    for(let i=0; i<10; i++) {
+    for(let i=0; i<8; i++) {
       hintArray.push(['n', 'n', 'n', 'n']);
       guessArray.push(['no', 'no', 'no' ,'no']);
     }
