@@ -6,6 +6,7 @@ import greenGuess from './images/greenGuess.png';
 import blueGuess from './images/blueGuess.png';
 import yellowGuess from './images/yellowGuess.png';
 import noGuess from './images/noGuess.png';
+import checkButton from './images/checkbutton.png';
 
 class Guess extends React.Component {
     constructor(props){
@@ -43,7 +44,7 @@ class Guess extends React.Component {
                     <span><img src={guessesToRender[1]} alt="guess2" id="2" onClick={this.makeChoice}/></span>
                     <span><img src={guessesToRender[2]} alt="guess3" id="3" onClick={this.makeChoice}/></span>
                     <span><img src={guessesToRender[3]} alt="guess4" id="4" onClick={this.makeChoice}/></span>
-                    <span><button>check</button></span>
+                    <span>&nbsp;&nbsp;&nbsp;<img src={checkButton} alt="checkbutton"/></span>
                 </div>)
             } else {
             renderedGuess = (
