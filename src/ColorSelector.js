@@ -15,8 +15,6 @@ class ColorSelector extends React.Component {
     pickColor(e){
         let color = e.target.id;
         this.props.onSelectColor(color);
-        //console.log('pickColor activated: ' + color);
-
     }
 
     render() {

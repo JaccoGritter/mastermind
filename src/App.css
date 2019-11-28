@@ -1,28 +1,31 @@
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  background: url(./images/woods-background-1.jpg);
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Righteous', cursive;
 }
 
 .main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border: 2px solid black;
   background-color: rgb(245, 197, 138);
   color: rgb(43, 7, 7);
   text-align: center;
   width: 350px;
-  padding: 20px;
+  padding: 10px;
 }
 
 #hidden-puzzle {
   border: 3px double white;
-  height: 80px;
+  padding: 0px;
+  height: 60px;
+  background-color: rgb(32, 156, 238);
+  color: white;
 }
 
 #puzzle-solution {
-  margin-bottom: 0px;
-}
-
-#play-again {
-  margin-top: -15px;
+  margin: 15px;
 }
 
 .playingfield {
@@ -69,4 +72,18 @@ cursor: pointer;
 
 .pickedcolor {
 width: 40px;
+}
+
+#new_game {
+  cursor: pointer;
+  color: rgb(94, 94, 240); 
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background: url(./images/woods-background-1.jpg);
+  }
+  main {
+    margin-top: 20px;;
+  }
 }
