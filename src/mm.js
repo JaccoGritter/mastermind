@@ -18,7 +18,7 @@ mm.checkGuess = (puzzel, guess) => {
     for (let i=0; i<4; i++) {
         if(puzzelArray[i] === guessArray[i]) {
             result.push('b');
-            puzzelArray[i] =  'Y'
+            puzzelArray[i] = 'Y'
             guessArray[i] = 'X';
         }
     }
