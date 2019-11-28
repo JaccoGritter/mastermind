@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import './Board.css';
 import HiddenPuzzle from './HiddenPuzzle';
 import Hintsblock from './Hintsblock'
 import Message from './Message';
@@ -16,7 +15,7 @@ class App extends React.Component {
     this.state = {
       selectedColor: 'yellow',
       turn: 1,
-      message: "Crack the code!",
+      message: "Crack the code",
       gameOver: false
     };
     this.selectColor = this.selectColor.bind(this);
@@ -36,7 +35,6 @@ class App extends React.Component {
   }
 
   selectColor(newColor) {
-    //console.log('selectcolor activated on ' + color);
     let oldColor = this.state.selectedColor;
     document.getElementById(oldColor).classList.remove('pickedcolor');
     this.setState({ selectedColor: newColor });
@@ -46,13 +44,13 @@ class App extends React.Component {
   makeChoice(position) {
     const guessArray = this.state.guesses;
     guessArray[this.state.turn - 1][position] = this.state.selectedColor;
-    //console.log('MakeChoice:\n' + guessArray[0]);
     this.setState({ guesses: guessArray });
   }
 
   checkGuess() {
-    //console.log('Check guess');
     const guessArray = this.state.guesses;
+    
+    // check if 4 colors have been picked
     if (guessArray[this.state.turn - 1].includes('no')) {
       this.setState({ message: 'Please pick 4 colours!' });
       return;
@@ -61,30 +59,31 @@ class App extends React.Component {
     const hintArray = this.state.hints;
     let result = MM.checkGuess(this.state.puzzle, guessArray[this.state.turn - 1])
     hintArray[this.state.turn - 1] = result;
-    let newTurn = this.state.turn + 1;
-    let newMessage;
-    let gameOver = false;
+    let newTurn = this.state.turn + 1, newMessage, gameOver = false;
+    // 4 x 'b' means 4 black pins means player wins
     if (result.filter(value => value === 'b').length === 4) {
       newMessage = "You win in " + (newTurn - 1) + " turns!";
       gameOver = true;
+    // max turns is 8 so at turn 9 player looses
     } else if (newTurn === 9) {
       newMessage = "No more turns. Game over!"
       gameOver = true;
-    } else newMessage = 'Turn ' + newTurn + ". Let's play!";
+    // or else we continue the game
+    } else newMessage = 'Turn ' + newTurn + ". Crack the code!";
 
     this.setState({ hints: hintArray, turn: newTurn, message: newMessage, gameOver: gameOver });
+  }
 
-    console.log('Guesses: ' + guessArray[this.state.turn - 1]);
-    console.log('Puzzle: ' + this.state.puzzle);
-    console.log('result: ' + result);
+  startNewGame() {
+    window.location.reload();
   }
 
   render() {
     return (
-      <center>
+      
         <div className="main">
           <HiddenPuzzle gameOver={this.state.gameOver} hiddenPuzzle={this.state.puzzle} />
-          <Message message={this.state.message} />
+          <Message message={this.state.message} gameOver={this.state.gameOver} onStartNewGame={this.startNewGame}/>
           <div className="playingfield">
             <div className="hints">
               <Hintsblock hints={this.state.hints} />
@@ -97,9 +96,8 @@ class App extends React.Component {
             <p>Pick a Color</p>
             <ColorSelector onSelectColor={this.selectColor} />
           </div>
-
         </div>
-      </center>
+      
     );
   }
 }
