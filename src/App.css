@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
+body {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .main {
@@ -14,7 +10,60 @@
   padding: 20px;
 }
 
-#hiddenPuzzle {
+#hidden-puzzle {
   border: 3px double white;
+  height: 80px;
 }
 
+#puzzle-solution {
+  margin-bottom: 0px;
+}
+
+#play-again {
+  margin-top: -15px;
+}
+
+.playingfield {
+  display: flex;
+}
+
+.hints {
+text-align: center;
+width: 40%;
+}
+
+.hint {
+display: inline-box;
+margin: 5px auto;
+width: 30%;
+height: 40px;
+border: 1px solid black;
+}
+
+.hint img {
+width: 30%;
+}
+
+.guesses {
+width: 80%;
+text-align: left;
+}
+
+.guess {
+display: inline-box;
+margin: 7px auto;
+width: 90%;
+height: 40px;
+}
+
+.active-guess {
+cursor: pointer;
+}
+
+#checkbutton {
+cursor: pointer;
+}
+
+.pickedcolor {
+width: 40px;
+}

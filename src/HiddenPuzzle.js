@@ -8,13 +8,20 @@ class HiddenPuzzle extends React.Component {
         let element;
         if (gameOver) {
             element = 
-            <Guess guess={puzzle} active={false} key={'RevealedPuzzle'} onMakeChoice={this.props.onMakeChoice} onCheckGuess={this.props.onCheckGuess} gameOver={this.props.gameOver} />
+            <div>
+                <div id="puzzle-solution">
+                    <Guess guess={puzzle} active={false} key={'RevealedPuzzle'} onMakeChoice={this.props.onMakeChoice} onCheckGuess={this.props.onCheckGuess} gameOver={this.props.gameOver} />
+                </div>
+                <div id="play-again">
+                    <h3>Play Again</h3>
+                </div>
+            </div>
         } else {
             element = (
-                <h3>Master Mind</h3>
+            <h1>Master Mind</h1> 
             )
         }
-        return (<div id="hiddenPuzzle">{element}</div>);
+        return (<div id="hidden-puzzle">{element}</div>);
     }
 
     render() {

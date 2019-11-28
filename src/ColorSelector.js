@@ -23,12 +23,12 @@ class ColorSelector extends React.Component {
 
         return (
             <div>
-            <img src={yellowGuess} alt="yellow" id="yellow" onClick={this.pickColor} className='colorchoice pickedcolor' />
-            <img src={greenGuess} alt="green" id="green" onClick={this.pickColor} className='colorchoice' />
-            <img src={whiteGuess} alt="white" id="white" onClick={this.pickColor} className='colorchoice' />
-            <img src={blackGuess} alt="black" id="black" onClick={this.pickColor} className='colorchoice' />
-            <img src={redGuess} alt="red" id="red" onClick={this.pickColor} className='colorchoice' />
-            <img src={blueGuess} alt="blue" id="blue" onClick={this.pickColor} className='colorchoice' />
+            <img src={yellowGuess} alt="yellow" id="yellow" onClick={this.pickColor} className='colorchoice active-guess pickedcolor' />
+            <img src={greenGuess} alt="green" id="green" onClick={this.pickColor} className='colorchoice active-guess' />
+            <img src={whiteGuess} alt="white" id="white" onClick={this.pickColor} className='colorchoice active-guess' />
+            <img src={blackGuess} alt="black" id="black" onClick={this.pickColor} className='colorchoice active-guess' />
+            <img src={redGuess} alt="red" id="red" onClick={this.pickColor} className='colorchoice active-guess' />
+            <img src={blueGuess} alt="blue" id="blue" onClick={this.pickColor} className='colorchoice active-guess' />
             </div>
         )
     }

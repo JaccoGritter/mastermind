@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './Board.css';
+// import './Board.css';
 import HiddenPuzzle from './HiddenPuzzle';
 import Hintsblock from './Hintsblock'
 import Message from './Message';
@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       selectedColor: 'yellow',
       turn: 1,
-      message: "Let's play!",
+      message: "Crack the code!",
       gameOver: false
     };
     this.selectColor = this.selectColor.bind(this);
@@ -93,7 +93,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="colorSelector">
-          <p>colorSelector</p>
+          <p>Pick A Color</p>
           <ColorSelector onSelectColor={this.selectColor} />
         </div>
 
