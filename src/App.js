@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './Board.css';
-// import Hint from './Hint';
+import HiddenPuzzle from './HiddenPuzzle';
 import Hintsblock from './Hintsblock'
 import Message from './Message';
 import ColorSelector from './ColorSelector';
@@ -82,7 +82,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <p id="guessblock">Master Mind</p>
+        <HiddenPuzzle gameOver={this.state.gameOver} hiddenPuzzle={this.state.puzzle}/>
         <Message message={this.state.message}/>
         <div className="playingfield">
           <div className="hints">
@@ -92,7 +92,6 @@ class App extends React.Component {
             <Guessesblock guesses={this.state.guesses} turn={this.state.turn} onMakeChoice={this.makeChoice} onCheckGuess={this.checkGuess} gameOver={this.state.gameOver}/>
           </div>
         </div>
-
         <div className="colorSelector">
           <p>colorSelector</p>
           <ColorSelector onSelectColor={this.selectColor} />
