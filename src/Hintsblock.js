@@ -1,5 +1,5 @@
 import React from 'react';
-import Hint from './Hint';
+import Hint from './Hint.js';
 
 class Hintsblock extends React.Component {
    
