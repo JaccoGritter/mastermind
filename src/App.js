@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       selectedColor: 'yellow',
       turn: 1,
-      message: "Crack the code",
+      message: "Crack the code!",
       gameOver: false
     };
     this.selectColor = this.selectColor.bind(this);
