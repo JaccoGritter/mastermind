@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <h1>Mastermind</h1>
+<i>An app created with the React JavaScript framework</i><br/>
 <h3>How to play</h3>
 <article>
 The computer generates a random 4 color secret code. You need to crack this code! <br/><br/>
