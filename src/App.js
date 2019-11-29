@@ -56,7 +56,7 @@ class App extends React.Component {
     
     // check if 4 colors have been picked
     if (guessArray[this.state.turn - 1].includes('no')) {
-      this.setState({ message: 'Please pick 4 colours!' });
+      this.setState({ message: 'Please pick 4 colors!' });
       return;
     }
 
