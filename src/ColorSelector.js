@@ -5,6 +5,7 @@ import redGuess from './images/redGuess.png';
 import greenGuess from './images/greenGuess.png';
 import blueGuess from './images/blueGuess.png';
 import yellowGuess from './images/yellowGuess.png';
+import eraser from './images/eraser.png';
 
 class ColorSelector extends React.Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class ColorSelector extends React.Component {
             <img src={blackGuess} alt="black" id="black" onClick={this.pickColor} className='colorchoice active-guess' />
             <img src={redGuess} alt="red" id="red" onClick={this.pickColor} className='colorchoice active-guess' />
             <img src={blueGuess} alt="blue" id="blue" onClick={this.pickColor} className='colorchoice active-guess' />
+            <img src={eraser} alt="eraser" id="no" onClick={this.pickColor} className='colorchoice active-guess' />
             </div>
         )
     }
