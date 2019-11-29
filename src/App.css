@@ -16,7 +16,6 @@ body {
 }
 
 #hidden-puzzle {
-  /* width: 300px; */
   border: 3px double white;
   padding: 0px;
   height: 60px;
@@ -82,7 +81,7 @@ body {
 
 @media only screen and (min-width: 400px) {
   body {
-    background: url(./images/woods-background-1.jpg);
+    background: url(./images/matrix.jpg);
   }
   .main {
   position: absolute;
