@@ -10,10 +10,14 @@ class Message extends React.Component {
     renderMessage(gameOver) {
         let element;
         if(!gameOver) {
-            element = <p>{this.props.message}</p>
+            element = (
+            <div id="message">
+            <p>{this.props.message}</p>
+            </div>
+            )
         } else {
             element = (
-            <div>
+            <div id="message">
             <p>{this.props.message}<span id="new_game" onClick={this.startNewGame}> Click to play again!</span></p>
             </div>
             )

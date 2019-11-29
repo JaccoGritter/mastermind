@@ -80,7 +80,6 @@ class App extends React.Component {
 
   render() {
     return (
-      
         <div className="main">
           <HiddenPuzzle gameOver={this.state.gameOver} hiddenPuzzle={this.state.puzzle} />
           <Message message={this.state.message} gameOver={this.state.gameOver} onStartNewGame={this.startNewGame}/>
@@ -97,7 +96,6 @@ class App extends React.Component {
             <ColorSelector onSelectColor={this.selectColor} />
           </div>
         </div>
-      
     );
   }
 }
