@@ -23,6 +23,10 @@ body {
   color: white;
 }
 
+#hidden-puzzle h2 {
+  margin-top: 15px;
+}
+
 #puzzle-solution {
   margin: 15px;
 }
