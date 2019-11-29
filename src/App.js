@@ -43,7 +43,11 @@ class App extends React.Component {
 
   makeChoice(position) {
     const guessArray = this.state.guesses;
-    guessArray[this.state.turn - 1][position] = this.state.selectedColor;
+    if(guessArray[this.state.turn - 1][position] === this.state.selectedColor){
+      guessArray[this.state.turn - 1][position] = 'no';
+    } else {
+      guessArray[this.state.turn - 1][position] = this.state.selectedColor;
+    }
     this.setState({ guesses: guessArray });
   }
 
