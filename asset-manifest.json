@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mastermind/static/css/main.506bba76.chunk.css",
-    "main.js": "/mastermind/static/js/main.30e04b72.chunk.js",
-    "main.js.map": "/mastermind/static/js/main.30e04b72.chunk.js.map",
+    "main.css": "/mastermind/static/css/main.f161514f.chunk.css",
+    "main.js": "/mastermind/static/js/main.5a7a2f35.chunk.js",
+    "main.js.map": "/mastermind/static/js/main.5a7a2f35.chunk.js.map",
     "runtime-main.js": "/mastermind/static/js/runtime-main.186fced9.js",
     "runtime-main.js.map": "/mastermind/static/js/runtime-main.186fced9.js.map",
     "static/js/2.64c402c5.chunk.js": "/mastermind/static/js/2.64c402c5.chunk.js",
     "static/js/2.64c402c5.chunk.js.map": "/mastermind/static/js/2.64c402c5.chunk.js.map",
     "index.html": "/mastermind/index.html",
-    "precache-manifest.3f389913853cf2bc8ee8276dde0e7dc9.js": "/mastermind/precache-manifest.3f389913853cf2bc8ee8276dde0e7dc9.js",
+    "precache-manifest.c800df6443986adaf0a8e8c0c9fafe38.js": "/mastermind/precache-manifest.c800df6443986adaf0a8e8c0c9fafe38.js",
     "service-worker.js": "/mastermind/service-worker.js",
-    "static/css/main.506bba76.chunk.css.map": "/mastermind/static/css/main.506bba76.chunk.css.map",
+    "static/css/main.f161514f.chunk.css.map": "/mastermind/static/css/main.f161514f.chunk.css.map",
     "static/media/App.css": "/mastermind/static/media/woods-background-1.347f334f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.186fced9.js",
     "static/js/2.64c402c5.chunk.js",
-    "static/css/main.506bba76.chunk.css",
-    "static/js/main.30e04b72.chunk.js"
+    "static/css/main.f161514f.chunk.css",
+    "static/js/main.5a7a2f35.chunk.js"
   ]
 }
