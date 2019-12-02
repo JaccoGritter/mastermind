@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mastermind/static/css/main.fc33feef.chunk.css",
+    "main.css": "/mastermind/static/css/main.350b8c84.chunk.css",
     "main.js": "/mastermind/static/js/main.d6bca86f.chunk.js",
     "main.js.map": "/mastermind/static/js/main.d6bca86f.chunk.js.map",
     "runtime-main.js": "/mastermind/static/js/runtime-main.186fced9.js",
@@ -8,15 +8,15 @@
     "static/js/2.42029c99.chunk.js": "/mastermind/static/js/2.42029c99.chunk.js",
     "static/js/2.42029c99.chunk.js.map": "/mastermind/static/js/2.42029c99.chunk.js.map",
     "index.html": "/mastermind/index.html",
-    "precache-manifest.c6761288dd6e9054c38f3b7984ddad04.js": "/mastermind/precache-manifest.c6761288dd6e9054c38f3b7984ddad04.js",
+    "precache-manifest.001aaa69ad8fb83a3ff7d0f9764909e4.js": "/mastermind/precache-manifest.001aaa69ad8fb83a3ff7d0f9764909e4.js",
     "service-worker.js": "/mastermind/service-worker.js",
-    "static/css/main.fc33feef.chunk.css.map": "/mastermind/static/css/main.fc33feef.chunk.css.map",
+    "static/css/main.350b8c84.chunk.css.map": "/mastermind/static/css/main.350b8c84.chunk.css.map",
     "static/media/App.css": "/mastermind/static/media/matrix.99bd2b3c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.186fced9.js",
     "static/js/2.42029c99.chunk.js",
-    "static/css/main.fc33feef.chunk.css",
+    "static/css/main.350b8c84.chunk.css",
     "static/js/main.d6bca86f.chunk.js"
   ]
 }
